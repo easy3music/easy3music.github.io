@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 30px;
   font-weight: 600;
   background-color: rgb(255, 192, 0);
   color: rgb(86, 1, 85);
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-
+/* Header Image */
 .header-img {
   display: block;
   margin: 20px auto;
@@ -18,6 +20,7 @@ body {
   height: auto;
 }
 
+/* Main Photo */
 .photo-img {
   display: block;
   margin: 20px auto;
@@ -26,7 +29,42 @@ body {
   height: auto;
 }
 
+/* Facebook Container */
 .fb-container {
   margin: 20px auto;
   text-align: center;
+  width: 90%;
+  max-width: 800px;
+}
+
+/* Responsive Breakpoints */
+
+/* Tablets (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header-img {
+    width: 40%;
+  }
+  .photo-img {
+    width: 50%;
+  }
+}
+
+/* Laptops / Small Desktops (1024px - 1599px) */
+@media (min-width: 1024px) and (max-width: 1599px) {
+  .header-img {
+    width: 30%;
+  }
+  .photo-img {
+    width: 40%;
+  }
+}
+
+/* Large Desktops (1600px and up) */
+@media (min-width: 1600px) {
+  .header-img {
+    width: 25%;
+  }
+  .photo-img {
+    width: 35%;
+  }
 }
