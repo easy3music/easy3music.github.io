@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
 html {
-  margin-left: calc(100vw - 100%)
+  margin-left: calc(100vw - 100%);
 }
 
 body {
@@ -12,3 +12,8 @@ body {
   color: rgb(86, 1, 85);
 }
 
+.title {
+  text-align: center;
+  font-size: 100px;
+  margin-top: 40px;
+}
