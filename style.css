@@ -118,6 +118,37 @@ body {
   border-radius: 10px;
 }
 
+/* ---------------- Gigs Timeline ---------------- */
+.gigs-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* spacing between items */
+  margin-top: 10px;
+}
+
+.gig-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-left: 4px solid rgb(86, 1, 85); /* timeline line */
+  border-radius: 6px;
+}
+
+.gig-date {
+  font-weight: 700;
+  color: rgb(86, 1, 85);
+  min-width: 90px; /* keeps dates aligned */
+  text-align: right;
+}
+
+.gig-details {
+  flex: 1;
+  text-align: left;
+  line-height: 1.4;
+}
+
 /* ---------------- Responsive Breakpoints ---------------- */
 @media (max-width: 767px) {
   html { font-size: 14px; }
@@ -139,6 +170,17 @@ body {
 
   .responsive-iframe { max-width: 90%; }
   .left-column .widget { min-height: auto; }
+
+  /* Timeline stacking on mobile */
+  .gig-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .gig-date {
+    text-align: left;
+    min-width: auto;
+    margin-bottom: 5px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
