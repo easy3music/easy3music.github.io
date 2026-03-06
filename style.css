@@ -29,18 +29,10 @@ body {
   height: auto;
 }
 
-/* Facebook Container (for fallback if needed) */
-.fb-container {
-  margin: 20px auto;
-  text-align: center;
-  width: 90%;
-  max-width: 800px;
-}
-
 /* Two-Column Layout */
 .content-section {
   display: flex;
-  flex-wrap: wrap; /* stack on smaller screens */
+  flex-wrap: wrap; /* allow wrapping on small screens */
   justify-content: space-between;
   margin: 20px auto;
   width: 90%;
@@ -50,13 +42,13 @@ body {
 
 /* Left Column: Text and Links */
 .left-column {
-  flex: 1 1 300px; /* grow, shrink, min width */
+  flex: 1 1 300px;
   min-width: 250px;
 }
 
 /* Right Column: Facebook Widget */
 .right-column {
-  flex: 1 1 500px; /* grow, shrink, min width */
+  flex: 1 1 500px;
   min-width: 300px;
 }
 
@@ -77,13 +69,43 @@ body {
 
 /* Responsive Breakpoints */
 
+/* Small screens (phones) */
+@media (max-width: 767px) {
+  body {
+    font-size: 18px; /* smaller text */
+  }
+
+  .content-section {
+    flex-direction: column; /* stack columns */
+    align-items: center;
+  }
+
+  .left-column, .right-column {
+    flex: 1 1 100%; /* full width */
+    min-width: unset;
+  }
+
+  .right-column .fb-page {
+    width: 100% !important;
+  }
+}
+
 /* Tablets (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .header-img {
-    width: 40%;
+  body {
+    font-size: 22px; /* medium text size */
   }
-  .photo-img {
-    width: 50%;
+
+  .content-section {
+    flex-direction: row; /* side by side */
+  }
+
+  .left-column {
+    flex: 1 1 45%;
+  }
+
+  .right-column {
+    flex: 1 1 50%;
   }
 }
 
