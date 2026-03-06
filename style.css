@@ -89,8 +89,14 @@ body {
 /* Links Styling */
 .left-column a,
 .right-column a {
-  color: rgb(86, 1, 85);
+  color: rgb(255, 192, 0); /* Set links to yellow */
   text-decoration: none;
+}
+
+/* Prevent visited links from changing color */
+.left-column a:visited,
+.right-column a:visited {
+  color: rgb(255, 192, 0); /* Keep the same color (yellow) as the normal link */
 }
 
 /* Remove underline on hover */
@@ -194,7 +200,7 @@ body {
 }
 
 .ticket-section a {
-  color: rgb(86, 1, 85);
+  color: rgb(255, 192, 0); /* Set the link color to yellow */
   text-decoration: none;
 }
 
