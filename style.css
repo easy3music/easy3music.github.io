@@ -48,28 +48,28 @@ body {
 .left-column {
   flex: 1 1 300px;
   min-width: 250px;
-  text-align: center; /* Center content in the left column */
+  text-align: center;
 }
 
 /* Right Column */
 .right-column {
   flex: 1 1 300px;
   min-width: 250px;
-  text-align: center; /* Center content in the right column */
+  text-align: center;
 }
 
 /* Label Styling for Upcoming Gigs, Instagram, Facebook, Spotify */
 .section-label {
-  background-color: rgb(86, 1, 85); /* Purple background */
-  color: rgb(255, 192, 0); /* Yellow text */
+  background-color: rgb(86, 1, 85);
+  color: rgb(255, 192, 0);
   padding: 10px 20px;
-  border-radius: 6px; /* Rounded corners */
+  border-radius: 6px;
   font-size: 1.25rem;
-  margin-bottom: 10px; /* Space below the label */
-  display: inline-block; /* Adjust to text size */
-  text-align: center; /* Center the text inside the label */
-  margin-left: auto;  /* Center the label horizontally */
-  margin-right: auto; /* Center the label horizontally */
+  margin-bottom: 10px;
+  display: inline-block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Links Styling */
@@ -111,13 +111,13 @@ body {
 
 /* Spotify widget with fixed height */
 .spotify-widget .responsive-iframe {
-  padding-bottom: 0; /* Remove padding for fixed height */
+  padding-bottom: 0;
   height: 400px; /* Fixed height for Spotify */
 }
 
 /* YouTube widget */
 .youtube-widget .responsive-iframe {
-  padding-bottom: 0; /* Remove padding for fixed height */
+  padding-bottom: 0;
   height: 300px; /* Fixed height for YouTube */
 }
 
@@ -135,9 +135,9 @@ body {
 .gigs-timeline {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* spacing between items */
+  gap: 15px;
   margin-top: 10px;
-  font-size: 1rem; /* smaller font for gigs list */
+  font-size: 1rem;
 }
 
 .gig-item {
@@ -146,14 +146,14 @@ body {
   gap: 15px;
   padding: 10px 15px;
   background-color: rgba(255, 255, 255, 0.2);
-  border-left: 4px solid rgb(86, 1, 85); /* timeline line */
+  border-left: 4px solid rgb(86, 1, 85);
   border-radius: 6px;
 }
 
 .gig-date {
   font-weight: 700;
   color: rgb(86, 1, 85);
-  min-width: 90px; /* keeps dates aligned */
+  min-width: 90px;
   text-align: right;
 }
 
@@ -161,6 +161,30 @@ body {
   flex: 1;
   text-align: left;
   line-height: 1.4;
+}
+
+/* ---------------- New Ticket Section ---------------- */
+.ticket-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.ticket-img {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px; /* Added rounded corners */
+}
+
+.ticket-section a {
+  color: rgb(86, 1, 85);
+  text-decoration: none;
+}
+
+.ticket-section a:hover {
+  text-decoration: underline;
 }
 
 /* ---------------- Responsive Breakpoints ---------------- */
