@@ -48,26 +48,25 @@ body {
 .left-column {
   flex: 1 1 300px;
   min-width: 250px;
+  text-align: left;
 }
 
 /* Right Column */
 .right-column {
-  flex: 1 1 500px;
-  min-width: 300px;
-}
-
-/* Facebook widget fills its column */
-.right-column .fb-page {
-  width: 100% !important;
+  flex: 1 1 300px;
+  min-width: 250px;
+  text-align: left;
 }
 
 /* Links Styling */
-.left-column a {
+.left-column a,
+.right-column a {
   color: rgb(86, 1, 85);
   text-decoration: none;
 }
 
-.left-column a:hover {
+.left-column a:hover,
+.right-column a:hover {
   text-decoration: underline;
 }
 
@@ -94,10 +93,6 @@ body {
     max-width: 100%;
   }
 
-  .right-column .fb-page {
-    width: 100% !important;
-  }
-
   .header-img {
     width: 80%;
   }
@@ -117,12 +112,9 @@ body {
     flex-direction: row; /* side by side */
   }
 
-  .left-column {
-    flex: 1 1 45%;
-  }
-
+  .left-column,
   .right-column {
-    flex: 1 1 50%;
+    flex: 1 1 45%;
   }
 
   .header-img {
