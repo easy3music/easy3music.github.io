@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dante S-K - Home</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <a class="sidebar-name">Dante Saxton-Knight</a>
+    <a class="sidebar-name">|</a>
+    <a href="index.html" class="sidebar-button">Home</a>
+    <a href="games.html" class="sidebar-button">Games</a>
+    <a href="music.html" class="sidebar-button">Music</a>
+    <a href="art.html" class="sidebar-button">Art</a>
+    <a href="CV.html" class="sidebar-button">CV</a>
+  </div>
+  <div class="paragraphs">
+    <h1>Hello 😎</h1>
+    <p>Welcome to my website. My name is Dante Saxton-Knight; I'm an indie game developer, musician and artist with a love of creative and beautiful games.</p>
+  </div>
+  <div class="buttons-container">
+    <a href="games.html" class="button">
+      <div class="button-image" style="background-image: url('games.jpg');"></div>
+      <span class="button-text">Games</span>
+    </a>
+    <a href="music.html" class="button">
+      <div class="button-image" style="background-image: url('music.jpg');"></div>
+      <span class="button-text">Music</span>
+    </a>
+    <a href="art.html" class="button">
+      <div class="button-image" style="background-image: url('art.jpg');"></div>
+      <span class="button-text">Art</span>
+    </a>
+  </div>
+  <div class="paragraphs">
+    <p>I've been creating my own games since the age of 9, starting with small projects using game engines made to entertain my friends.
+      As I became more interested in the underlying mechanisms that make video games work, I started learning languages such as C, C++ and Python during my free time while in secondary school and
+      began creating games from scratch.
+    </p>
+    <p>
+      I've been teaching myself jazz piano and improvisation since 2020, and have been studying and composing classical music since 2018. I have been most influenced by 
+      jazz, hip-hop, classical, progressive rock and video game music.
+    </p>
+    <p>
+      I've loved drawing since I was a toddler, creating optical illusions and fantastical creatures from as far back as I can remember.
+      Some of my biggest inspirations are M. C. Escher, Hieronymus Bosch and my grandparents, Colin Saxton and Josephone Howard.
+    </p>
+    <p>
+      If you'd like to get in contact feel free to send me an email at <span class="email-link" onclick="copyToClipboard('dantejsk@googlemail.com')">dantejsk@googlemail.com (📋copy to clipboard)</span>
+    </p>
+    <script>
+      function copyToClipboard(text) {
+          const input = document.createElement('input');
+          input.setAttribute('value', text);
+          document.body.appendChild(input);
+          input.select();
+          document.execCommand('copy');
+          document.body.removeChild(input);
+          alert('Copied to clipboard: ' + text);
+      }
+  </script>
+  </div>
+</body>
+</html>
