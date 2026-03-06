@@ -48,22 +48,28 @@ body {
 .left-column {
   flex: 1 1 300px;
   min-width: 250px;
-  text-align: left;
+  text-align: center; /* Center content in the left column */
 }
 
 /* Right Column */
 .right-column {
   flex: 1 1 300px;
   min-width: 250px;
-  text-align: left;
+  text-align: center; /* Center content in the right column */
 }
 
-/* Widget titles */
-.widget-title {
-  margin: 10px 0 5px 0;
+/* Label Styling for Upcoming Gigs, Instagram, Facebook, Spotify */
+.section-label {
+  background-color: rgb(86, 1, 85); /* Purple background */
+  color: rgb(255, 192, 0); /* Yellow text */
+  padding: 10px 20px;
+  border-radius: 6px; /* Rounded corners */
   font-size: 1.25rem;
-  color: rgb(86, 1, 85);
-  text-align: center; /* centered above each widget */
+  margin-bottom: 10px; /* Space below the label */
+  display: inline-block; /* Adjust to text size */
+  text-align: center; /* Center the text inside the label */
+  margin-left: auto;  /* Center the label horizontally */
+  margin-right: auto; /* Center the label horizontally */
 }
 
 /* Links Styling */
