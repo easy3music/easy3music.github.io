@@ -7,16 +7,11 @@ body {
 
 }
 
-.header {
-  display: block;
-  margin: 40px auto;
-  max-width: 600px; /* optional size control */
-  width: 80%;       /* scales nicely on different screens */
-}
-
-.photo {
-  display: block;
-  margin: 0 auto;
-  max-width: 800px;
-  width: 90%;
+/* Make all images with this class responsive */
+.responsive-img {
+  display: block;       /* ensures margin auto works */
+  margin: 20px auto;    /* centers the image and adds vertical spacing */
+  width: 90%;           /* image takes up 90% of the screen width */
+  max-width: 800px;     /* prevents it from being too big on large screens */
+  height: auto;         /* maintains aspect ratio */
 }
