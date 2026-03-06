@@ -29,12 +29,50 @@ body {
   height: auto;
 }
 
-/* Facebook Container */
+/* Facebook Container (for fallback if needed) */
 .fb-container {
   margin: 20px auto;
   text-align: center;
   width: 90%;
   max-width: 800px;
+}
+
+/* Two-Column Layout */
+.content-section {
+  display: flex;
+  flex-wrap: wrap; /* stack on smaller screens */
+  justify-content: space-between;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+/* Left Column: Text and Links */
+.left-column {
+  flex: 1 1 300px; /* grow, shrink, min width */
+  min-width: 250px;
+}
+
+/* Right Column: Facebook Widget */
+.right-column {
+  flex: 1 1 500px; /* grow, shrink, min width */
+  min-width: 300px;
+}
+
+/* Facebook widget fills its column */
+.right-column .fb-page {
+  width: 100% !important;
+}
+
+/* Links Styling */
+.left-column a {
+  color: rgb(86, 1, 85);
+  text-decoration: none;
+}
+
+.left-column a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive Breakpoints */
