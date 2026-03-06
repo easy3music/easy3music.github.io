@@ -109,9 +109,16 @@ body {
   padding-bottom: 80%; /* shorter, same height */
 }
 
-/* Spotify widget keeps original height */
+/* Spotify widget with fixed height */
 .spotify-widget .responsive-iframe {
-  padding-bottom: 56.25%; 
+  padding-bottom: 0; /* Remove padding for fixed height */
+  height: 400px; /* Fixed height for Spotify */
+}
+
+/* YouTube widget */
+.youtube-widget .responsive-iframe {
+  padding-bottom: 0; /* Remove padding for fixed height */
+  height: 300px; /* Fixed height for YouTube */
 }
 
 .responsive-iframe iframe {
