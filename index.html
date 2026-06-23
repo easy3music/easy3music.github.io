@@ -19,38 +19,38 @@
   <!-- Two-Column Section -->
   <div class="content-section">
 
-    
     <!-- Left Column -->
     <div class="left-column">
 
       <h3 class="section-label">
-      <a href="contact.html">Contact us</a>
+        <a href="contact.html">Contact us</a>
       </h3>
+
       <h2 class="gigs-label">Upcoming Gigs!</h2>
 
       <div class="gigs-timeline">
 
-        <div class="gig-item">
+        <div class="gig-item" data-date="2026-07-10">
           <div class="gig-date">Fri 10 Jul</div>
           <div class="gig-details">Criterion Theatre Coventry - 7:30pm</div>
         </div>
 
-        <div class="gig-item">
+        <div class="gig-item" data-date="2026-07-25">
           <div class="gig-date">Sat 25 Jul</div>
           <div class="gig-details">Smith Street Warwick - 2pm</div>
         </div>
 
-        <div class="gig-item">
+        <div class="gig-item" data-date="2026-09-04">
           <div class="gig-date">Fri 4 Sep</div>
           <div class="gig-details">Wildes Bar Leamington - 9pm</div>
         </div>
 
-        <div class="gig-item">
+        <div class="gig-item" data-date="2026-09-12">
           <div class="gig-date">Sat 12 Sep</div>
           <div class="gig-details">Leamington Food Festival - 12pm</div>
         </div>
 
-        <div class="gig-item">
+        <div class="gig-item" data-date="2026-10-11">
           <div class="gig-date">Sun 11 Oct</div>
           <div class="gig-details">Temperance Leamington - 2pm</div>
         </div>
@@ -59,7 +59,7 @@
 
       <!-- Ticket Section -->
 
-<!--
+      <!--
       <div class="ticket-section">
         <h3 class="section-label">
           <a href="https://www.eventbrite.co.uk/e/sunday-jazz-temperance-easy-3-jazz-quartet-ft-vocals-of-mary-savva-tickets-1984540753817?aff=oddtdtcreator" target="_blank">
@@ -70,9 +70,8 @@
           <img src="temperance.png" alt="Temperance Tickets" class="ticket-img">
         </a>
       </div>
+      -->
 
-    </div>
--->
       <div class="ticket-section">
         <h3 class="section-label">
           <a href="https://criteriontheatre.co.uk/seats/10554" target="_blank">
@@ -128,6 +127,21 @@
     </div>
 
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+
+      document.querySelectorAll('.gig-item').forEach(gig => {
+        const gigDate = new Date(gig.dataset.date);
+
+        if (gigDate < today) {
+          gig.style.display = 'none';
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
