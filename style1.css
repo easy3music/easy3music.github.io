@@ -6,7 +6,7 @@ html {
 
 body {
   font-family: 'Roboto Mono', sans-serif;
-  font-size: 1.875rem; 
+  font-size: 1.875rem;
   font-weight: 600;
   background-color: rgb(255, 192, 0);
   color: rgb(86, 1, 85);
@@ -33,141 +33,114 @@ body {
   height: auto;
 }
 
-/* Two-Column Layout */
+/* ---------------- Single Column Layout ---------------- */
 .content-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: block;
   margin: 20px auto;
   width: 90%;
-  max-width: 1200px;
-  gap: 20px;
+  max-width: 800px;
 }
 
-/* Left Column */
-.left-column {
-  flex: 1 1 300px;
-  min-width: 250px;
-  text-align: center;
-}
-
-/* Right Column */
+.left-column,
 .right-column {
-  flex: 1 1 300px;
-  min-width: 250px;
+  width: 100%;
   text-align: center;
+  margin-bottom: 40px;
 }
 
-/* Label Styling for Upcoming Gigs, Instagram, Facebook, Spotify */
+/* ---------------- Section Labels ---------------- */
 .section-label {
   background-color: rgb(86, 1, 85);
-  color: rgb(255, 192, 0); /* Yellow */
+  color: rgb(255, 192, 0);
   padding: 10px 20px;
   border-radius: 6px;
   font-size: 1.25rem;
   margin-bottom: 10px;
   display: inline-block;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-/* Links inside the section labels */
 .section-label a {
-  color: rgb(255, 192, 0); /* Set the link color to yellow */
+  color: rgb(255, 192, 0);
   text-decoration: none;
 }
 
-.section-label a:hover {
-  text-decoration: none; /* Remove underline on hover */
-}
-
+.section-label a:hover,
 .section-label a:visited {
-  color: rgb(255, 192, 0); /* Set visited link color to yellow */
+  color: rgb(255, 192, 0);
+  text-decoration: none;
 }
 
-/* Links Styling */
+/* ---------------- Links ---------------- */
 .left-column a,
 .right-column a {
-  color: rgb(255, 192, 0); /* Set links to yellow */
+  color: rgb(255, 192, 0);
   text-decoration: none;
 }
 
-/* Prevent visited links from changing color */
+.left-column a:hover,
+.right-column a:hover,
 .left-column a:visited,
 .right-column a:visited {
-  color: rgb(255, 192, 0); /* Keep the same color (yellow) as the normal link */
+  color: rgb(255, 192, 0);
+  text-decoration: none;
 }
 
-/* Remove underline on hover */
-.left-column a:hover,
-.right-column a:hover {
-  text-decoration: none; /* Remove underline */
-}
-
-/* ---------------- Widget Styling ---------------- */
+/* ---------------- Widgets ---------------- */
 .widget {
-  margin: 15px 0;
+  margin: 15px auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 200px; 
+  min-height: 200px;
 }
 
-/* Responsive iframe wrapper */
 .responsive-iframe {
   position: relative;
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   height: 0;
   overflow: hidden;
-  padding-bottom: 56.25%; /* default for Spotify */
+  padding-bottom: 56.25%;
 }
 
-/* Instagram and Facebook widgets same height, less tall */
 .instagram-widget .responsive-iframe,
 .facebook-widget .responsive-iframe {
-  padding-bottom: 80%; /* shorter, same height */
+  padding-bottom: 80%;
 }
 
-/* Spotify widget with fixed height */
 .spotify-widget .responsive-iframe {
   padding-bottom: 0;
-  height: 400px; /* Fixed height for Spotify */
+  height: 400px;
 }
 
-/* YouTube widget */
 .youtube-widget .responsive-iframe {
   padding-bottom: 0;
-  height: 300px; /* Fixed height for YouTube */
+  height: 300px;
 }
 
 .responsive-iframe iframe {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   border: none;
   border-radius: 10px;
 }
 
-/* ---------------- Gigs Label ---------------- */
+/* ---------------- Upcoming Gigs ---------------- */
 .gigs-label {
   display: block;
   text-align: left;
   font-size: 1.1rem;
   margin-bottom: 8px;
   padding: 10px 15px;
-
   background-color: rgba(255, 255, 255, 0.35);
   border-radius: 6px;
-
   color: rgb(86, 1, 85);
   font-weight: 700;
 }
 
-/* ---------------- Gigs Timeline ---------------- */
 .gigs-timeline {
   display: flex;
   flex-direction: column;
@@ -199,7 +172,7 @@ body {
   line-height: 1.4;
 }
 
-/* ---------------- New Ticket Section ---------------- */
+/* ---------------- Ticket Section ---------------- */
 .ticket-section {
   text-align: center;
   margin-top: 20px;
@@ -209,47 +182,73 @@ body {
   display: block;
   margin: 20px auto;
   width: 100%;
-  max-width: 100%;
+  max-width: 500px;
   height: auto;
-  border-radius: 12px; /* Added rounded corners */
+  border-radius: 12px;
 }
 
 .ticket-section a {
-  color: rgb(255, 192, 0); /* Set the link color to yellow */
+  color: rgb(255, 192, 0);
   text-decoration: none;
 }
 
 .ticket-section a:hover {
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
 }
 
-/* ---------------- Responsive Breakpoints ---------------- */
-@media (max-width: 767px) {
-  html { font-size: 14px; }
-  body { font-size: 1.125rem; }
+/* ---------------- Contact Form ---------------- */
 
-  .content-section {
-    flex-direction: column !important;
-    align-items: stretch;
+.email-address {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.form-iframe {
+  padding-bottom: 0;
+  height: 100vh;
+  max-width: 100%;
+}
+
+.form-iframe iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 767px) {
+
+  html {
+    font-size: 14px;
   }
 
-  .left-column,
-  .right-column {
-    flex: 0 0 100%;
+  body {
+    font-size: 1.125rem;
+  }
+
+  .header-img {
+    width: 80%;
+  }
+
+  .photo-img {
+    width: 90%;
+  }
+
+  .responsive-iframe {
     max-width: 100%;
   }
 
-  .header-img { width: 80%; }
-  .photo-img { width: 90%; }
-
-  .responsive-iframe { max-width: 90%; }
-  .left-column .widget { min-height: auto; }
-
-  /* Timeline stacking on mobile */
   .gig-item {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .gig-date {
     text-align: left;
     min-width: auto;
@@ -258,42 +257,38 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  body { font-size: 1.375rem; }
 
-  .content-section { flex-direction: row; }
-  .left-column,
-  .right-column { flex: 1 1 45%; }
+  body {
+    font-size: 1.375rem;
+  }
 
-  .header-img { width: 40%; }
-  .photo-img { width: 50%; }
+  .header-img {
+    width: 40%;
+  }
+
+  .photo-img {
+    width: 50%;
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1599px) {
-  .header-img { width: 30%; }
-  .photo-img { width: 40%; }
+
+  .header-img {
+    width: 30%;
+  }
+
+  .photo-img {
+    width: 40%;
+  }
 }
 
 @media (min-width: 1600px) {
-  .header-img { width: 25%; }
-  .photo-img { width: 35%; }
-}
 
-/* ---------------- Contact Form ---------------- */
-.form-container {
-  width: 90%;
-  max-width: 800px;
-  margin: 40px auto;
-}
+  .header-img {
+    width: 25%;
+  }
 
-/* Override default responsive-iframe behavior for forms */
-.form-iframe {
-  padding-bottom: 0;
-  height: 100vh; /* full screen height */
-  max-width: 100%;
-}
-
-.form-iframe iframe {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  .photo-img {
+    width: 35%;
+  }
 }
