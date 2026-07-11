@@ -58,30 +58,28 @@
       <!-- Ticket Section -->
       <div class="ticket-section">
 
-
-<!--
-        <h3 class="section-label">
+        <div class="ticket-item" data-date="2026-07-10">
+          <h3 class="section-label">
+            <a href="https://criteriontheatre.co.uk/seats/10554" target="_blank">
+              Criterion Tickets
+            </a>
+          </h3>
           <a href="https://criteriontheatre.co.uk/seats/10554" target="_blank">
-            Criterion Tickets
+            <img src="criterion ticket.png" alt="Criterion Tickets" class="ticket-img">
           </a>
-        </h3>
-        <a href="https://criteriontheatre.co.uk/seats/10554" target="_blank">
-          <img src="criterion ticket.png" alt="Criterion Tickets" class="ticket-img">
-        </a>
--->
+        </div>
 
-
-        <h3 class="section-label">
+        <div class="ticket-item" data-date="2026-10-11">
+          <h3 class="section-label">
+            <a href="https://www.eventbrite.co.uk/e/sunday-jazz-temperance-easy-3-jazz-quartet-ft-vocals-of-mary-savva-tickets-1992048148637?aff=oddtdtcreator" target="_blank">
+              Temperance Tickets
+            </a>
+          </h3>
           <a href="https://www.eventbrite.co.uk/e/sunday-jazz-temperance-easy-3-jazz-quartet-ft-vocals-of-mary-savva-tickets-1992048148637?aff=oddtdtcreator" target="_blank">
-            Temperance Tickets
+            <img src="temperance ticket.png" alt="Temperance Tickets" class="ticket-img">
           </a>
-        </h3>
-        <a href="https://www.eventbrite.co.uk/e/sunday-jazz-temperance-easy-3-jazz-quartet-ft-vocals-of-mary-savva-tickets-1992048148637?aff=oddtdtcreator" target="_blank">
-          <img src="temperance ticket.png" alt="Temperance Tickets" class="ticket-img">
-        </a>
+        </div>
       </div>
-
-
 
     </div>
 
@@ -148,6 +146,14 @@
 
         if (gigDate < today) {
           gig.style.display = 'none';
+        }
+      });
+
+      document.querySelectorAll('.ticket-item').forEach(ticket => {
+        const ticketDate = new Date(ticket.dataset.date);
+
+        if (ticketDate < today) {
+          ticket.style.display = 'none';
         }
       });
     });
